@@ -1,0 +1,49 @@
+#activity-karta,
+#dostihy-a-sazky-karta,
+#activity-karta,
+#dostihyasazky-karta,
+#scrabble-karta,
+#monopoly-karta,
+#dixit-karta,
+#carcassonne-karta,
+#bang-karta,
+#krycijmena-karta,
+#karak-karta,
+#vybusnekocky-karta,
+#ubongo-karta,
+#tickettoride-karta,
+#divu-sveta-karta,
+#jizdenky-prosim-karta,
+#duch-karta {
+    display: none;
+}
+
+#activitypocet,
+#dostihyasazkypocet,
+#scrabblepocet,
+#monopolypocet,
+#dixitpocet,
+#carcassonnepocet,
+#bangpocet,
+#krycijmenapocet,
+#karakpocet,
+#vybusnekockypocet,
+#ubongopocet,
+#tickettoridepocet,
+#divusvetapocet,
+#jizdenkyprosimpocet,
+#duchpocet {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.schovanykosik {
+    display: none;
+}
+
+#zaplatit {
+    /* hello */
+}
+
+.odskok {
+    margin-bottom: 60px;
+}

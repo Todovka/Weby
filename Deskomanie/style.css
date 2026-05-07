@@ -1,0 +1,262 @@
+/* Na všechny barvy byla použita stránka bairesdev.com (AI barvy) proto jsou některé zapsány hex */
+* {
+    background-color: #0D1F2D;
+}
+
+.titul-stránky {
+    font-size: 140px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 750;
+    color: #ffff;
+    text-shadow:
+        -5px 7px 7px #FF3D3D,
+        0 0 10px #FF3D3D,
+        0 0 15px #FF3D3D,
+        0 0 21px #ffe0c8,
+        0 0 42px #ffe0c8;
+}
+
+.titul-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    margin-top: 30px;
+}
+
+.div-hledani {
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 0px;
+}
+
+#hledat {
+    height: 45px;
+    width: 950px;
+    background-color: #afffff;
+    font-size: 30px;
+
+}
+
+#hledat:hover {
+    transform: scale(1.08);
+    transition: transform 2s;
+}
+
+#hledat::placeholder {
+    font-size: 28px;
+}
+
+#tlacitko-lupa {
+    background-color: #afffff;
+    height: 55px;
+    width: 70px;
+}
+
+#tlacitko-lupa:hover {
+    transform: scale(1.1);
+    transition: transform 2s;
+}
+
+.lupa {
+    width: 30px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#error, #zaplaceno {
+    color: #ffe0c8;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 750;
+    text-shadow:
+        0 0 4px #FF3D3D,
+        0 0 10px #FF3D3D,
+        0 0 21px #ffe0c8;
+
+}
+
+.div-kosik {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.kosik {
+    width: 330px;
+    height: 80px;   
+    font-size: 45px;
+    background-color: #afffff;
+    color: #4a9d9c;
+    border-radius: 50px;
+    box-shadow:
+        0 0 4px #afffff,
+        0 0 10px #afffff;
+    cursor: pointer;
+}
+
+.kosik:hover {
+    transform: scale(1.2);
+    box-shadow:
+        0 0 4px #afffff,
+        0 0 10px #afffff,
+        -9px 13px 18px #FF3D3D,
+        9px 13px 18px #FF3D3D,
+        -9px 0 28px #ffe0c8;
+    transition: transform 1.5s, box-shadow 2s;
+}
+
+.zaplatit {
+    width: 200px;
+    height: 65px;
+    font-size: 35px;
+    background-color: #afffff;
+    color: #4a9d9c;
+    border-radius: 50px;
+    box-shadow:
+        0 0 4px #afffff,
+        0 0 10px #afffff;
+    cursor: pointer;
+}
+
+.zaplatit:hover {
+    transform: scale(1.2);
+    box-shadow:
+        0 0 4px #afffff,
+        0 0 10px #afffff,
+        -9px 13px 18px #FF3D3D,
+        9px 13px 18px #FF3D3D,
+        -9px 0 28px #ffe0c8;
+    transition: transform 1.5s, box-shadow 2s;
+}
+
+
+.polozky {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    display: flex;
+    padding-top: 50px;
+}
+
+.produkt, .produkt-v-kosiku{
+    background-color: #354656;
+    border: 5px solid #4a9d9c;
+    border-radius: 10px;
+    width: 220px;
+    height: 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.produkt:hover {
+    transform: scale(1.1);
+    transition: transform 3s;
+}
+
+.produkt, .produkt-v-kosiku h3 {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 20px;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 750;
+    text-shadow:
+        0 0 4px #FF3D3D,
+        0 0 14px #ffe0c8;
+}
+
+.zarovnani-obrazku {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.obrazek {
+    width: 170px;
+    height: 170px;
+    border: 5px solid black;
+    border-radius: 40px;
+}
+
+.popis {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-shadow: 0 0 8px #ffe0c8;
+}
+
+.tlacitko-do-kosiku {
+    width: 170px;
+    height: 35px;
+    font-size: 20px;
+    background-color: #afffff;
+    color: #0D1F2D;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.odebrat-z-kosiku{
+    width: 105px;
+    height: 35px;
+    font-size: 20px;
+    background-color: #afffff;
+    color: #0D1F2D;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.plus{
+    width: 30px;
+    height: 35px;
+    font-size: 20px;
+    background-color: #afffff;
+    color: #0D1F2D;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.minus{
+    width: 30px;
+    height: 35px;
+    font-size: 20px;
+    background-color: #afffff;
+    color: #0D1F2D;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.gap-only{
+    gap:30px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.podpis {
+    padding-top: 50px;
+    color: #ffe0c8;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-shadow:
+        0 0 4px #FF3D3D,
+        0 0 15px #ffe0c8;
+}
+
+.polozky-kosiku {
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    display: flex;
+}
+
+.oddeleni-kosiku {
+    border-bottom: solid 2px #e0e0e0;
+}
