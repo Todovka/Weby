@@ -1,0 +1,63 @@
+.nadpis {
+    font-size: 200px;
+    text-align: center;
+    background-color: rgb(73, 14, 128);
+    color: rgb(189, 178, 163);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vizitka img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+   }
+
+.vizitka h2 {
+        font-size: 35px;
+        color: rgb(73, 14, 128);
+    }
+
+.vizitka p {
+        font-size: 23px;
+        color: rgb(168, 5, 133);
+    }
+
+header {
+        padding: 35px;
+    }
+
+footer {
+    margin-top: 30px;
+    background-color: rgb(73, 14, 128);
+    color: rgb(189, 178, 163);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+* {
+    background-color: rgb(224, 188, 163);
+}
+
+.vizitka {
+    border: 20px solid rgb(73, 5, 133);
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    height: 500px;
+    padding: 15px;
+    
+}
+
+.karty {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.vizitka:hover {
+    transform: scale(1.05);
+    border-color: red;
+}

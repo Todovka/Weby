@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendář</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigace zvyrazneni"><!-- Navigace -->
+        <h1>KALENDÁŘ</h1>
+        <ul id="ukoly">
+            <li>Promazat historii vyhledávání <button
+                    onclick="pridat('lightcoral','Promazat historii vyhledávání')">Přidat</button></li>
+            <li>Přijmout žádosti o sledování na IG <button
+                    onclick="pridat('lightsalmon', 'Přijmout žádosti o sledování na IG')">Přidat</button></li>
+            <li>Zajistit aby Toodvič dostal jedničku <button
+                    onclick="pridat('plum','Zajistit aby Toodvič dostal jedničku')">Přidat</button></li>
+        </ul>
+        <button onclick="pridat_novy_ukol()">Přidat nový úkol</button>
+    </div><!-- Navigace - šlus -->
+
+    <div class="kalendar zvyrazneni"><!-- Kalendář -->
+        <div class="den" id="po">
+            <h1>Pondělí</h1>
+            <p>Úkoly:</p>
+            <div id="lu-po" class="list_ukolu"></div>
+        </div>
+        <div class="den" id="ut">
+            <h1>Úterý</h1>
+            <p>Úkoly:</p>
+            <div id="lu-ut" class="list_ukolu"></div>
+        </div>
+        <div class="den" id="st">
+            <h1>Středa</h1>
+            <p>Úkoly:</p>
+            <div id="lu-st" class="list_ukolu"></div>
+        </div>
+        <div class="den" id="ct">
+            <h1>Čtvrtek</h1>
+            <p>Úkoly:</p>
+            <div id="lu-ct" class="list_ukolu"></div>
+        </div>
+        <div class="den" id="pa">
+            <h1>Pátek</h1>
+            <p>Úkoly:</p>
+            <div id="lu-pa" class="list_ukolu"></div>
+        </div>
+        <div class="den" id="so">
+            <h1>Sobota</h1>
+            <p>Úkoly:</p>
+            <div id="lu-so" class="list_ukolu"></div>
+        </div>
+        <div class="den" id="ne">
+            <h1>Neděle</h1>
+            <p>Úkoly:</p>
+            <div id="lu-ne" class="list_ukolu"></div>
+        </div>
+    </div><!-- Kalendář - šlus -->
+</body>
+<script src="script.js"></script>
+
+</html>

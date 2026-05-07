@@ -1,0 +1,122 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 55px;
+}
+
+header {
+    background-color: darkslategray;
+    padding: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: whitesmoke;
+}
+
+.obchod,
+.kosicek {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 40px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px darkslategray;
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.obchod {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kosicek {
+    text-align: center;
+    margin-top: 50px !important;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
+}
+
+.polozka {
+    border: solid 2px rgb(53, 53, 53);
+    border-radius: 40px;
+    width: 180px;
+    height: 350px;
+    box-shadow: 1px 1px 5px rgb(53, 53, 53);
+    text-align: center;
+}
+
+.polozka h3,
+.kosik h2 {
+    font-size: 25px;
+    color: black;
+}
+
+.polozka img {
+    width: 150px;
+    height: 150px;
+    border: solid 2px rgb(53, 53, 53);
+    border-radius: 20px;
+}
+
+.polozka p {
+    text-align: left !important;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.polozka button {
+    width: 165px;
+    background-color: green;
+    height: 25px;
+    font-size: 19px;
+    border: solid whitesmoke 1px;
+    border-radius: 20px;
+}
+
+.polozka button:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 114, 0);
+    transition: transform 0.5s, background-color 0.3s;
+}
+
+.kosicek p {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.kosicek button {
+    width: 200px;
+    background-color: green;
+    height: 40px;
+    font-size: 28px;
+    border: solid whitesmoke 1px;
+    border-radius: 20px;
+}
+
+.kosicek button:hover {
+
+    transform: scale(1.05);
+    background-color: rgb(0, 114, 0);
+    transition: transform 0.5s, background-color 0.3s;
+}
+
+#cena_nakupu {
+    color: green;
+}
+
+footer p {
+    margin-top: 50px;
+}
+
+.kosicek h5 {
+    font-size: 24px;
+}
+
+#obsah_kosiku {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+}

@@ -1,0 +1,17 @@
+header {
+    background-color: orange;
+}
+
+main {
+    background-color: red;
+}
+
+footer {
+    background-color: green;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}

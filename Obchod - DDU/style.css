@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+main {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    min-height: 800px;
+}
+
+.ohraniceni {
+    border: none;
+}
+
+.obchod {
+    width: 1100px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 4px 15px gray;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    gap: 20px;
+}
+
+.kosik {
+    width: 500px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 4px 15px gray;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.polozka {
+    width: 260px;
+    height: 480px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 2px 8px silver;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.polozka h3 {
+    font-size: 22px;
+    color: rgb(81, 81, 81);
+    margin-bottom: 15px;
+}
+
+.polozka h3 span {
+    color: rgb(0, 0, 0);
+}
+
+.polozka img {
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.polozka h4 {
+    text-align: left;
+    width: 200px;
+    padding-left: 5px;
+    color: rgb(81, 81, 81);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.popis {
+    color: rgb(0, 0, 0);
+}
+
+.ceny {
+    color: green;
+}
+
+.polozka button {
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.polozka button:hover {
+    background-color: darkblue;
+}
+
+.kosik h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: black;
+}
+
+.kosik section {
+    margin-top: 40px;
+    border-top: 2px solid lightgray;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.kosik section h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.kosik section button {
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 250px;
+    height: 55px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.kosik section button:hover {
+    background-color: darkblue;
+}
+
+#nakupni-kosik {
+    list-style-type: none;
+    padding: 0px;
+    min-height: 100px;
+}
+
+#nakupni-kosik li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}

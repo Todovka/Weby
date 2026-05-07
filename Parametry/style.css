@@ -1,0 +1,30 @@
+main{
+    margin-top: 80px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main div{
+    width: 250px;
+    height: 385px;
+    border: 4px solid black;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+}
+main div img{
+    width: 180px;
+    height: auto;
+    padding-top: 5px;
+}
+main div h2{
+    text-align: center;
+    color: black;
+}
+main div button{
+    width: 180px;
+    height: 30px;
+    font-size: 22px;
+    margin-top: 15px;
+}

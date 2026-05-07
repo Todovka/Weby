@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obchod</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Obchůdek s žáky 1. H a 1. I</h1>
+    </header>
+    <main>
+        <div class="obchod ohraniceni"><!--div s obchodem-->
+
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Janek Skalák</span></h3>
+                <img src="assets/janek.jpeg" alt="Janek">
+                <h4>Věk: <span class="popis">vypadá na 25</span></h4>
+                <h4>Stav: <span class="popis">Má hlad</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_janek">8500</span> Kč</h4>
+                <button onclick="koupit('cena_janek', 'Janek Skalák')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Štěpán Merhout</span></h3>
+                <img src="assets/stepan.jpeg" alt="Štěpán">
+                <h4>Věk: <span class="popis">16</span></h4>
+                <h4>Stav: <span class="popis">Připraven do boje</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_stepan">12000</span> Kč</h4>
+                <button onclick="koupit('cena_stepan', 'Štěpán Merhout')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>David "Dajda" Beneš</span></h3>
+                <img src="assets/david.jpeg" alt="David">
+                <h4>Věk: <span class="popis">15</span></h4>
+                <h4>Stav: <span class="popis">Pracuje s AI</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_david">5000</span> Kč</h4>
+                <button onclick="koupit('cena_david', 'David Beneš')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Miroslav Pergler</span></h3>
+                <img src="assets/mira.jpeg" alt="Míra">
+                <h4>Věk: <span class="popis">15</span></h4>
+                <h4>Stav: <span class="popis">Napaden Jankem</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_mira">9500</span> Kč</h4>
+                <button onclick="koupit('cena_mira', 'Míra Pergler')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Ondřej "Ondra" Mečl</span></h3>
+                <img src="assets/ondra.jpeg" alt="Ondra">
+                <h4>Věk: <span class="popis">15</span></h4>
+                <h4>Stav: <span class="popis">Arch Linux</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_ondra">17000</span> Kč</h4>
+                <button onclick="koupit('cena_ondra', 'Ondřej Mečl')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Kuba Petorivč</span></h3>
+                <img src="assets/kuba.jpeg" alt="Kuba">
+                <h4>Věk: <span class="popis">16</span></h4>
+                <h4>Stav: <span class="popis">V dluhu</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_kuba">13000</span> Kč</h4>
+                <button onclick="koupit('cena_kuba', 'Kuba Petorivč')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Roman Novák</span></h3>
+                <img src="assets/roman.jpeg" alt="Roman">
+                <h4>Věk: <span class="popis">15</span></h4>
+                <h4>Stav: <span class="popis">Pěstuje špenát</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_roman">3000</span> Kč</h4>
+                <button onclick="koupit('cena_roman', 'Roman Novák')">Do košíku</button>
+            </div>
+            <div class="polozka ohraniceni">
+                <h3>Jméno: <span>Marek "Mára" Fára</span></h3>
+                <img src="assets/mara.jpeg" alt="Marek">
+                <h4>Věk: <span class="popis">vypadá na 20</span></h4>
+                <h4>Stav: <span class="popis">Na internátu</span></h4>
+                <h4>Cena: <span class="ceny" id="cena_marek">11500</span> Kč</h4>
+                <button onclick="koupit('cena_marek', 'Marek Fára')">Do košíku</button>
+            </div>
+
+        </div><!--konec divu s obchodem-->
+
+        <div class="kosik ohraniceni"><!--div s košíkem-->
+            <h1>Košík</h1>
+            <ul id="nakupni-kosik"></ul>
+            <section>
+                <h3>Cena: <span id="cena"></span></h3>
+                <button onclick="zaplatit()">Zaplatit</button>
+                <br><br>
+                <button onclick="zmena_pinu()">Změnit PIN</button>
+            </section>
+        </div><!--konec divu s košíkem-->
+    </main>
+    <footer>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

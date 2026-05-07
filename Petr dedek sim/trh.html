@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petr dedek simek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Petr dědek simulator</h1>
+        <a href="info.html" class="header-btn">Info o majitelovi</a>
+    </header>
+    <main>
+        <div class="hlavicka-trhu">
+            <h6 class="utrata">Peníze na útratu: <span id="penize"></span> Kč</h6>
+            <button class="schovat-btn" onclick="prodatVse()">Prodat hokejisty</button>
+        </div>
+        <div class="hlavicka-trhu">
+            <h5 class="trh">Trh s hráči:</h5>
+        </div>
+
+        <div class="obchod" id="obchod-hraci">
+
+            <h2 class="kategorie-nadpis">
+                Brankáři <button class="schovat-btn maly-btn" id="btn-brankari"
+                    onclick="schovatSkupinu('skupina-brankari', 'btn-brankari')">Ukázat</button></h2>
+
+            <div id="skupina-brankari" class="skupina-hracu">
+                <div id="dostal" class="hrac">
+                    <h1>Lukáš Dostál</h1>
+                    <img src="assets/dostal.png" alt="Lukáš Dostál">
+                    <p class="info">Pozice: brankář</p>
+                    <p class="info">Věk: 23</p>
+                    <p class="info">Tým: Anaheim Ducks</p>
+                    <p class="cena">cena: 35 000 000</p>
+                    <button onclick="kupit(35000000, 'dostal')">Koupit</button>
+                </div>
+                <div id="dobes" class="hrac">
+                    <h1>Jakub Dobeš</h1>
+                    <img src="assets/dobes.png" alt="Jakub Dobeš">
+                    <p class="info">Pozice: brankář</p>
+                    <p class="info">Věk: 22</p>
+                    <p class="info">Tým: Montreal Canadiens</p>
+                    <p class="cena">cena: 18 000 000</p>
+                    <button onclick="kupit(18000000, 'dobes')">Koupit</button>
+                </div>
+                <div id="frodl" class="hrac">
+                    <h1>Dominik Frodl</h1>
+                    <img src="assets/frodl.png" alt="Dominik Frodl">
+                    <p class="info">Pozice: brankář</p>
+                    <p class="info">Věk: 27</p>
+                    <p class="info">Tým: HC Energie KV</p>
+                    <p class="cena">cena: 16 000 000</p>
+                    <button onclick="kupit(16000000, 'frodl')">Koupit</button>
+                </div>
+                <div id="korenar" class="hrac">
+                    <h1>Josef Kořenář</h1>
+                    <img src="assets/korenar.png" alt="Josef Kořenář">
+                    <p class="info">Pozice: brankář</p>
+                    <p class="info">Věk: 26</p>
+                    <p class="info">Tým: HC Sparta Praha</p>
+                    <p class="cena">cena: 17 000 000</p>
+                    <button onclick="kupit(17000000, 'korenar')">Koupit</button>
+                </div>
+                <div id="vejmelka" class="hrac">
+                    <h1>Karel Vejmelka</h1>
+                    <img src="assets/vejmelka.png" alt="Karel Vejmelka">
+                    <p class="info">Pozice: brankář</p>
+                    <p class="info">Věk: 27</p>
+                    <p class="info">Tým: Utah Mammoth</p>
+                    <p class="cena">cena: 55 000 000</p>
+                    <button onclick="kupit(55000000, 'vejmelka')">Koupit</button>
+                </div>
+                <div id="will" class="hrac">
+                    <h1>Roman Will</h1>
+                    <img src="assets/will.png" alt="Roman Will">
+                    <p class="info">Pozice: brankář</p>
+                    <p class="info">Věk: 31</p>
+                    <p class="info">Tým: HC Dynamo Pardubice</p>
+                    <p class="cena">cena: 25 000 000</p>
+                    <button onclick="kupit(25000000, 'will')">Koupit</button>
+                </div>
+            </div>
+
+            <h2 class="kategorie-nadpis">
+                Obránci <button class="schovat-btn maly-btn" id="btn-obranci"
+                    onclick="schovatSkupinu('skupina-obranci', 'btn-obranci')">Ukázat</button></h2>
+            <div id="skupina-obranci" class="skupina-hracu">
+                <div id="hronek" class="hrac">
+                    <h1>Filip Hronek</h1>
+                    <img src="assets/hronek.png" alt="Filip Hronek">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 26</p>
+                    <p class="info">Tým: Vancouver Canucks</p>
+                    <p class="cena">cena: 60 000 000</p>
+                    <button onclick="kupit(60000000, 'hronek')">Koupit</button>
+                </div>
+                <div id="simek" class="hrac">
+                    <h1>Radim Šimek</h1>
+                    <img src="assets/simek.png" alt="Radim Šimek">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 31</p>
+                    <p class="info">Tým: Bílí Tygři Liberec</p>
+                    <p class="cena">cena: 25 000 000</p>
+                    <button onclick="kupit(25000000, 'simek')">Koupit</button>
+                </div>
+                <div id="cibulka" class="hrac">
+                    <h1>Tomáš Cibulka</h1>
+                    <img src="assets/cibulka.png" alt="Tomáš Cibulka">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 20</p>
+                    <p class="info">Tým: Banes Motor ČB</p>
+                    <p class="cena">cena: 5 000 000</p>
+                    <button onclick="kupit(5000000, 'cibulka')">Koupit</button>
+                </div>
+                <div id="galvas" class="hrac">
+                    <h1>Jakub Galvas</h1>
+                    <img src="assets/galvas.png" alt="Jakub Galvas">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 24</p>
+                    <p class="info">Tým: Bílí Tygři Liberec</p>
+                    <p class="cena">cena: 13 000 000</p>
+                    <button onclick="kupit(13000000, 'galvas')">Koupit</button>
+                </div>
+                <div id="gazda" class="hrac">
+                    <h1>Daniel Gazda</h1>
+                    <img src="assets/gazda.png" alt="Daniel Gazda">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 26</p>
+                    <p class="info">Tým: HC Dynamo Pardubice</p>
+                    <p class="cena">cena: 10 000 000</p>
+                    <button onclick="kupit(10000000, 'gazda')">Koupit</button>
+                </div>
+                <div id="gulasi" class="hrac">
+                    <h1>Michal Gulaši</h1>
+                    <img src="assets/gulasi.png" alt="Michal Gulaši">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 37</p>
+                    <p class="info">Tým: HC Kometa Brno</p>
+                    <p class="cena">cena: 4 000 000</p>
+                    <button onclick="kupit(4000000, 'gulasi')">Koupit</button>
+                </div>
+                <div id="hajek" class="hrac">
+                    <h1>Libor Hájek</h1>
+                    <img src="assets/hajek.png" alt="Libor Hájek">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 26</p>
+                    <p class="info">Tým: HC Dynamo Pardubice</p>
+                    <p class="cena">cena: 23 000 000</p>
+                    <button onclick="kupit(23000000, 'hajek')">Koupit</button>
+                </div>
+                <div id="krejcik" class="hrac">
+                    <h1>Jakub Krejčík</h1>
+                    <img src="assets/krejcik.png" alt="Jakub Krejčík">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 32</p>
+                    <p class="info">Tým: HC Sparta Praha</p>
+                    <p class="cena">cena: 20 000 000</p>
+                    <button onclick="kupit(20000000, 'krejcik')">Koupit</button>
+                </div>
+                <div id="kundratek" class="hrac">
+                    <h1>Tomáš Kundrátek</h1>
+                    <img src="assets/kundratek.png" alt="Tomáš Kundrátek">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 34</p>
+                    <p class="info">Tým: HC Oceláři Třinec</p>
+                    <p class="cena">cena: 18 000 000</p>
+                    <button onclick="kupit(18000000, 'kundratek')">Koupit</button>
+                </div>
+                <div id="zabransky" class="hrac">
+                    <h1>Libor Zábranský</h1>
+                    <img src="assets/zabransky.png" alt="Libor Zábranský">
+                    <p class="info">Pozice: obránce</p>
+                    <p class="info">Věk: 23</p>
+                    <p class="info">Tým: HC Kometa Brno</p>
+                    <p class="cena">cena: 11 000 000</p>
+                    <button onclick="kupit(11000000, 'zabransky')">Koupit</button>
+                </div>
+            </div>
+
+            <h2 class="kategorie-nadpis">
+                Útočníci <button class="schovat-btn maly-btn" id="btn-utocnici"
+                    onclick="schovatSkupinu('skupina-utocnici', 'btn-utocnici')">Ukázat</button></h2>
+            <div id="skupina-utocnici" class="skupina-hracu">
+                <div id="pastrnak" class="hrac">
+                    <h1>David Pastrňák</h1>
+                    <img src="assets/pastrnak.png" alt="David Pastrňák">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 28</p>
+                    <p class="info">Tým: Boston Bruins</p>
+                    <p class="cena">cena: 150 000 000</p>
+                    <button onclick="kupit(150000000, 'pastrnak')">Koupit</button>
+                </div>
+                <div id="necas" class="hrac">
+                    <h1>Martin Nečas</h1>
+                    <img src="assets/necas.png" alt="Martin Nečas">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 25</p>
+                    <p class="info">Tým: Colorado Avalanche</p>
+                    <p class="cena">cena: 180 000 000</p>
+                    <button onclick="kupit(180000000, 'necas')">Koupit</button>
+                </div>
+                <div id="cervenka" class="hrac">
+                    <h1>Roman Červenka</h1>
+                    <img src="assets/cervenka.png" alt="Roman Červenka">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 38</p>
+                    <p class="info">Tým: HC Dynamo Pardubice</p>
+                    <p class="cena">cena: 18 000 000</p>
+                    <button onclick="kupit(18000000, 'cervenka')">Koupit</button>
+                </div>
+                <div id="beranek" class="hrac">
+                    <h1>Ondřej Beránek</h1>
+                    <img src="assets/beranek.png" alt="Ondřej Beránek">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 28</p>
+                    <p class="info">Tým: HC Energie KV</p>
+                    <p class="cena">cena: 15 000 000</p>
+                    <button onclick="kupit(15000000, 'beranek')">Koupit</button>
+                </div>
+                <div id="cernoch" class="hrac">
+                    <h1>Jiří Černoch</h1>
+                    <img src="assets/cernoch.png" alt="Jiří Černoch">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 27</p>
+                    <p class="info">Tým: HC Energie KV</p>
+                    <p class="cena">cena: 12 000 000</p>
+                    <button onclick="kupit(12000000, 'cernoch')">Koupit</button>
+                </div>
+                <div id="chlapik" class="hrac">
+                    <h1>Filip Chlapík</h1>
+                    <img src="assets/chlapik.png" alt="Filip Chlapík">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 26</p>
+                    <p class="info">Tým: HC Sparta Praha</p>
+                    <p class="cena">cena: 25 000 000</p>
+                    <button onclick="kupit(25000000, 'chlapik')">Koupit</button>
+                </div>
+                <div id="cihar" class="hrac">
+                    <h1>Vojtěch Čihař</h1>
+                    <img src="assets/cihar.png" alt="Vojtěch Čihař">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 18</p>
+                    <p class="info">Tým: Kelowna Rockets</p>
+                    <p class="cena">cena: 12 000 000</p>
+                    <button onclick="kupit(3000000, 'cihar')">Koupit</button>
+                </div>
+                <div id="filippi" class="hrac">
+                    <h1>Tomáš Filippi</h1>
+                    <img src="assets/filippi.png" alt="Tomáš Filippi">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 31</p>
+                    <p class="info">Tým: Bílí Tygři Liberec</p>
+                    <p class="cena">cena: 22 000 000</p>
+                    <button onclick="kupit(22000000, 'filippi')">Koupit</button>
+                </div>
+                <div id="flek" class="hrac">
+                    <h1>Jakub Flek</h1>
+                    <img src="assets/flek.png" alt="Jakub Flek">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 31</p>
+                    <p class="info">Tým: HC Kometa Brno</p>
+                    <p class="cena">cena: 19 000 000</p>
+                    <button onclick="kupit(19000000, 'flek')">Koupit</button>
+                </div>
+                <div id="flynn" class="hrac">
+                    <h1>Oscar Flynn</h1>
+                    <img src="assets/flynn.png" alt="Oscar Flynn">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 24</p>
+                    <p class="info">Tým: HC Oceláři Třinec</p>
+                    <p class="cena">cena: 14 000 000</p>
+                    <button onclick="kupit(14000000, 'flynn')">Koupit</button>
+                </div>
+                <div id="forman" class="hrac">
+                    <h1>Miroslav Forman</h1>
+                    <img src="assets/forman.png" alt="Miroslav Forman">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 33</p>
+                    <p class="info">Tým: HC Rytíři Kladno</p>
+                    <p class="cena">cena: 11 000 000</p>
+                    <button onclick="kupit(11000000, 'forman')">Koupit</button>
+                </div>
+                <div id="hyka" class="hrac">
+                    <h1>Tomáš Hyka</h1>
+                    <img src="assets/hyka.png" alt="Tomáš Hyka">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 31</p>
+                    <p class="info">Tým: HC Sparta Praha</p>
+                    <p class="cena">cena: 28 000 000</p>
+                    <button onclick="kupit(28000000, 'hyka')">Koupit</button>
+                </div>
+                <div id="kase-david" class="hrac">
+                    <h1>David Kaše</h1>
+                    <img src="assets/kase-david.png" alt="David Kaše">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 27</p>
+                    <p class="info">Tým: HC Verva Litvínov</p>
+                    <p class="cena">cena: 18 000 000</p>
+                    <button onclick="kupit(18000000, 'kase-david')">Koupit</button>
+                </div>
+                <div id="kase-ondrej" class="hrac">
+                    <h1>Ondřej Kaše</h1>
+                    <img src="assets/kase-ondrej.png" alt="Ondřej Kaše">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 28</p>
+                    <p class="info">Tým: HC Verva Litvínov</p>
+                    <p class="cena">cena: 35 000 000</p>
+                    <button onclick="kupit(35000000, 'kase-ondrej')">Koupit</button>
+                </div>
+                <div id="klima" class="hrac">
+                    <h1>Kevin Klíma</h1>
+                    <img src="assets/klima.png" alt="Kevin Klíma">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 26</p>
+                    <p class="info">Tým: HC Rytíři Kladno</p>
+                    <p class="cena">cena: 12 000 000</p>
+                    <button onclick="kupit(12000000, 'klima')">Koupit</button>
+                </div>
+                <div id="kohout" class="hrac">
+                    <h1>Martin Kohout</h1>
+                    <img src="assets/kohout.png" alt="Martin Kohout">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 29</p>
+                    <p class="info">Tým: Mountfield HK</p>
+                    <p class="cena">cena: 9 000 000</p>
+                    <button onclick="kupit(9000000, 'kohout')">Koupit</button>
+                </div>
+                <div id="lauko" class="hrac">
+                    <h1>Jakub Lauko</h1>
+                    <img src="assets/lauko.png" alt="Jakub Lauko">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 24</p>
+                    <p class="info">Tým: HC Dynamo Pardubice</p>
+                    <p class="cena">cena: 40 000 000</p>
+                    <button onclick="kupit(40000000, 'lauko')">Koupit</button>
+                </div>
+                <div id="raska" class="hrac">
+                    <h1>Adam Raška</h1>
+                    <img src="assets/raska.png" alt="Adam Raška">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 22</p>
+                    <p class="info">Tým: HC Sparta Praha</p>
+                    <p class="cena">cena: 10 000 000</p>
+                    <button onclick="kupit(10000000, 'raska')">Koupit</button>
+                </div>
+                <div id="ruzicka" class="hrac">
+                    <h1>Martin Růžička</h1>
+                    <img src="assets/ruzicka.png" alt="Martin Růžička">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 38</p>
+                    <p class="info">Tým: HC Oceláři Třinec</p>
+                    <p class="cena">cena: 21 000 000</p>
+                    <button onclick="kupit(21000000, 'ruzicka')">Koupit</button>
+                </div>
+                <div id="sedlak" class="hrac">
+                    <h1>Lukáš Sedlák</h1>
+                    <img src="assets/sedlak.png" alt="Lukáš Sedlák">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 31</p>
+                    <p class="info">Tým: HC Dynamo Pardubice</p>
+                    <p class="cena">cena: 45 000 000</p>
+                    <button onclick="kupit(45000000, 'sedlak')">Koupit</button>
+                </div>
+                <div id="tomek" class="hrac">
+                    <h1>Petr Tomek</h1>
+                    <img src="assets/tomek.png" alt="Petr Tomek">
+                    <p class="info">Pozice: útočník</p>
+                    <p class="info">Věk: 17</p>
+                    <p class="info">Tým: HC Energie KV</p>
+                    <p class="cena">cena: 8 000 000</p>
+                    <button onclick="kupit(8000000, 'tomek')">Koupit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hlavicka-trhu odsazena">
+            <h5 class="trh">Obchod s halami:</h5>
+        </div>
+
+        <div class="obchod" id="obchod-haly">
+            <h2 class="kategorie-nadpis">
+                Haly <button class="schovat-btn maly-btn" id="btn-haly"
+                    onclick="schovatSkupinu('skupina-haly', 'btn-haly')">Ukázat</button>
+            </h2>
+            <div class="skupina-hracu" id="skupina-haly">
+                <div id="enteria-arena" class="hala">
+                    <h1>Enteria arena</h1>
+                    <img src="loga/enteria.jpg" alt="Enteria arena">
+                    <p class="info">Kapacita: 10 100</p>
+                    <p class="info">Vlastník: město Pardubice</p>
+                    <p class="cena">cena: 1 000 000 000</p>
+                    <button onclick="kupit(1000000000, 'enteria-arena')">Koupit</button>
+                </div>
+                <div id="dd-arena" class="hala">
+                    <h1>D+D Arena</h1>
+                    <img src="loga/d+dynamo.webp" alt="D+D Arena">
+                    <p class="info">Kapacita: 30 800</p>
+                    <p class="info">Vlastník: Petr Dědek</p>
+                    <p class="cena">cena: 3 500 000 000</p>
+                    <button onclick="kupit(3500000000, 'dd-arena')">Koupit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hlavicka-trhu odsazena">
+            <h5 class="trh">Obchod s vybavením:</h5>
+        </div>
+
+        <div class="obchod" id="obchod-vybaveni">
+            <h2 class="kategorie-nadpis">
+                Rolby <button class="schovat-btn maly-btn" id="btn-rolby"
+                    onclick="schovatSkupinu('skupina-rolby', 'btn-rolby')">Ukázat</button>
+            </h2>
+            <div class="skupina-hracu" id="skupina-rolby">
+                <div id="rolba" class="vybaveni">
+                    <h1>Rolba</h1>
+                    <img src="loga/mammoth-rolba-1.png" alt="Rolba">
+                    <p class="info">Kapacita: 2 000 litrů</p>
+                    <p class="info">Značka: Mammoth</p>
+                    <p class="cena">cena: 5 000 000</p>
+                    <button onclick="kupit(5000000, 'rolba')">Koupit</button>
+                </div>
+                <div id="rolba_2" class="vybaveni">
+                    <h1>Rolba</h1>
+                    <img src="loga/mammoth-rolba-1.png" alt="Rolba">
+                    <p class="info">Kapacita: 4 000 litrů</p>
+                    <p class="info">Značka: Mammoth</p>
+                    <p class="cena">cena: 8 000 000</p>
+                    <button onclick="kupit(8000000, 'rolba_2')">Koupit</button>
+                </div>
+                <div id="rolba_3" class="vybaveni">
+                    <h1>Rolba</h1>
+                    <img src="loga/mammoth-rolba-1.png" alt="Rolba">
+                    <p class="info">Kapacita: 6 000 litrů</p>
+                    <p class="info">Značka: Mammoth</p>
+                    <p class="cena">cena: 12 000 000</p>
+                    <button onclick="kupit(12000000, 'rolba_3')">Koupit</button>
+                </div>
+                <div id="rolba_4" class="vybaveni">
+                    <h1>Rolba</h1>
+                    <img src="loga/mammoth-rolba-1.png" alt="Rolba">
+                    <p class="info">Kapacita: 8 000 litrů</p>
+                    <p class="info">Značka: Mammoth</p>
+                    <p class="cena">cena: 15 000 000</p>
+                    <button onclick="kupit(15000000, 'rolba_4')">Koupit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hlavicka-trhu odsazena">
+            <h5 class="trh">Obchod se servis týmem:</h5>
+        </div>
+
+        <div class="obchod" id="obchod-tym">
+            <h2 class="kategorie-nadpis">
+                Trenéři <button class="schovat-btn maly-btn" id="btn-treneri"
+                    onclick="schovatSkupinu('skupina-treneri', 'btn-treneri')">Ukázat</button></h2>
+            <div class="skupina-hracu" id="skupina-treneri">
+
+                <div id="trener_1" class="hrac">
+                    <h1>Radim Rulík</h1>
+                    <img src="assets/rulik.png" alt="Radim Rulík">
+                    <p class="info">Pozice: trenér</p>
+                    <p class="info">Věk: 55</p>
+                    <p class="cena">cena: 100 000 000</p>
+                    <button onclick="kupit(100000000, 'trener_1')">Koupit</button>
+                </div>
+                <div id="trener_2" class="hrac">
+                    <h1>Václav Varaďa</h1>
+                    <img src="assets/varada.png" alt="Václav Varaďa">
+                    <p class="info">Pozice: trenér</p>
+                    <p class="info">Věk: 48</p>
+                    <p class="cena">cena: 90 000 000</p>
+                    <button onclick="kupit(90000000, 'trener_2')">Koupit</button>
+                </div>
+                <div id="trener_3" class="hrac">
+                    <h1>Kamil Pokorný</h1>
+                    <img src="assets/pokorny.png" alt="Kamil Pokorný">
+                    <p class="info">Pozice: trenér</p>
+                    <p class="info">Věk: 54</p>
+                    <p class="cena">cena: 80 000 000</p>
+                    <button onclick="kupit(80000000, 'trener_3')">Koupit</button>
+                </div>
+                <div id="trener_4" class="hrac">
+                    <h1>Pavel Patera</h1>
+                    <img src="assets/patera.png" alt="Pavel Patera">
+                    <p class="info">Pozice: trenér</p>
+                    <p class="info">Věk: 52</p>
+                    <p class="cena">cena: 85 000 000</p>
+                    <button onclick="kupit(85000000, 'trener_4')">Koupit</button>
+                </div>
+                <div id="trener_5" class="hrac">
+                    <h1>Zdeněk Moták</h1>
+                    <img src="assets/motak.png" alt="Zdeněk Moták">
+                    <p class="info">Pozice: trenér</p>
+                    <p class="info">Věk: 59</p>
+                    <p class="cena">cena: 85 000 000</p>
+                    <button onclick="kupit(85000000, 'trener_5')">Koupit</button>
+                </div>
+                <div id="trener_6" class="hrac">
+                    <h1>Tomáš Plekanec</h1>
+                    <img src="assets/plekanec.png" alt="Tomáš Plekanec">
+                    <p class="info">Pozice: trenér</p>
+                    <p class="info">Věk: 41</p>
+                    <p class="cena">cena: 75 000 000</p>
+                    <button onclick="kupit(75000000, 'trener_6')">Koupit</button>
+                </div>
+            </div>
+
+
+            <h2 class="kategorie-nadpis">
+                Kustódi <button class="schovat-btn maly-btn" id="btn-kustodi"
+                    onclick="schovatSkupinu('skupina-kustodi', 'btn-kustodi')">Ukázat</button>
+            </h2>
+            <div class="skupina-hracu" id="skupina-kustodi">
+                <div id="kustod_1" class="hrac">
+                    <h1>Jan Novák</h1>
+                    <img src="assets/kustod.png" alt="Jan Novák">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 95/100</p>
+                    <p class="cena">cena: 12 000 000</p>
+                    <button onclick="kupit(12000000, 'kustod_1')">Koupit</button>
+                </div>
+                <div id="kustod_2" class="hrac">
+                    <h1>Petr Svoboda</h1>
+                    <img src="assets/kustod.png" alt="Petr Svoboda">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 80/100</p>
+                    <p class="cena">cena: 8 000 000</p>
+                    <button onclick="kupit(8000000, 'kustod_2')">Koupit</button>
+                </div>
+                <div id="kustod_3" class="hrac">
+                    <h1>Jiří Dvořák</h1>
+                    <img src="assets/kustod.png" alt="Jiří Dvořák">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 75/100</p>
+                    <p class="cena">cena: 6 500 000</p>
+                    <button onclick="kupit(6500000, 'kustod_3')">Koupit</button>
+                </div>
+                <div id="kustod_4" class="hrac">
+                    <h1>Pavel Černý</h1>
+                    <img src="assets/kustod.png" alt="Pavel Černý">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 90/100</p>
+                    <p class="cena">cena: 10 500 000</p>
+                    <button onclick="kupit(10500000, 'kustod_4')">Koupit</button>
+                </div>
+                <div id="kustod_5" class="hrac">
+                    <h1>Tomáš Procházka</h1>
+                    <img src="assets/kustod.png" alt="Tomáš Procházka">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 88/100</p>
+                    <p class="cena">cena: 9 500 000</p>
+                    <button onclick="kupit(9500000, 'kustod_5')">Koupit</button>
+                </div>
+                <div id="kustod_6" class="hrac">
+                    <h1>Milan Kučera</h1>
+                    <img src="assets/kustod.png" alt="Milan Kučera">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 70/100</p>
+                    <p class="cena">cena: 5 000 000</p>
+                    <button onclick="kupit(5000000, 'kustod_6')">Koupit</button>
+                </div>
+                <div id="kustod_7" class="hrac">
+                    <h1>Michal Veselý</h1>
+                    <img src="assets/kustod.png" alt="Michal Veselý">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 65/100</p>
+                    <p class="cena">cena: 4 000 000</p>
+                    <button onclick="kupit(4000000, 'kustod_7')">Koupit</button>
+                </div>
+                <div id="kustod_8" class="hrac">
+                    <h1>David Krejčí</h1>
+                    <img src="assets/kustod.png" alt="David Krejčí">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 99/100</p>
+                    <p class="cena">cena: 18 000 000</p>
+                    <button onclick="kupit(18000000, 'kustod_8')">Koupit</button>
+                </div>
+                <div id="kustod_9" class="hrac">
+                    <h1>Martin Pospíšil</h1>
+                    <img src="assets/kustod.png" alt="Martin Pospíšil">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 85/100</p>
+                    <p class="cena">cena: 9 000 000</p>
+                    <button onclick="kupit(9000000, 'kustod_9')">Koupit</button>
+                </div>
+                <div id="kustod_10" class="hrac">
+                    <h1>Radek Zeman</h1>
+                    <img src="assets/kustod.png" alt="Radek Zeman">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 72/100</p>
+                    <p class="cena">cena: 5 500 000</p>
+                    <button onclick="kupit(5500000, 'kustod_10')">Koupit</button>
+                </div>
+                <div id="kustod_11" class="hrac">
+                    <h1>Lukáš Marek</h1>
+                    <img src="assets/kustod.png" alt="Lukáš Marek">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 60/100</p>
+                    <p class="cena">cena: 3 000 000</p>
+                    <button onclick="kupit(3000000, 'kustod_11')">Koupit</button>
+                </div>
+                <div id="kustod_12" class="hrac">
+                    <h1>Václav Jelínek</h1>
+                    <img src="assets/kustod.png" alt="Václav Jelínek">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 55/100</p>
+                    <p class="cena">cena: 2 000 000</p>
+                    <button onclick="kupit(2000000, 'kustod_12')">Koupit</button>
+                </div>
+                <div id="kustod_13" class="hrac">
+                    <h1>Josef Růžička</h1>
+                    <img src="assets/kustod.png" alt="Josef Růžička">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 82/100</p>
+                    <p class="cena">cena: 8 500 000</p>
+                    <button onclick="kupit(8500000, 'kustod_13')">Koupit</button>
+                </div>
+                <div id="kustod_14" class="hrac">
+                    <h1>Karel Beneš</h1>
+                    <img src="assets/kustod.png" alt="Karel Beneš">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 78/100</p>
+                    <p class="cena">cena: 7 000 000</p>
+                    <button onclick="kupit(7000000, 'kustod_14')">Koupit</button>
+                </div>
+                <div id="kustod_15" class="hrac">
+                    <h1>Roman Fiala</h1>
+                    <img src="assets/kustod.png" alt="Roman Fiala">
+                    <p class="info">Pozice: kustod</p>
+                    <p class="info">Kvalita: 92/100</p>
+                    <p class="cena">cena: 11 000 000</p>
+                    <button onclick="kupit(11000000, 'kustod_15')">Koupit</button>
+                </div>
+
+
+
+
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

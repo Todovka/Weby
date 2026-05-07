@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        
+        <h1>Komunikace mezi JS a HTML</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Změna textu</h1>
+            <p id="paragraf">Tento text se změní</p>
+            <button onclick="zmena_textu()">změna</button>
+            <button onclick="red()">R</button>
+            <button onclick="blue()">G</button>
+            <button onclick="green()">B</button>
+        </div>
+        <div>
+            <h4>Klikačka</h4>
+            <p>Tohle číslo se bude měnit: <span id="pocitadlo">0</span></p> 
+            <button onclick="klik()">+1 klik</button>
+            <button onclick="mklik()">-1 klik</button>
+            <button onclick="nula()">vynulovat</button>
+        </div>
+        <div>
+            <h5>Změna barvy</h5>
+            <button onclick="orng()">Oranžovej</button>
+            <button onclick="grn()">Zelenej</button>
+        </div>
+        <div>
+            <h3>Obrázek</h3>
+            <img id="obrazek" src="assets/vaeh90oiptr11.webp" alt="error404"> <br>
+            <button id="smazat" onclick="změna()">Změna vánoční nálady</button>
+        </div>
+        <div>
+            <h3>Měnící se obrázky</h3>
+            <img id="vanoce" src="assets/vaeh90oiptr11.webp" alt="errer404">
+            <button onclick="jedna()">1</button>
+            <button onclick="dva()">2</button>
+            <button onclick="tri()">3</button>
+        </div>
+    </main>
+    <footer>
+        <h1 id="roman"></h1>
+    </footer>
+</body>
+</html>

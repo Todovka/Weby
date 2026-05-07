@@ -1,0 +1,29 @@
+HTML 5
+vždy pojmenovat XXXXXXX.html  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+1) inline = do atributu elementu přidáme: style=""
+	nevýhody:nepořádek
+
+2)interna = do hlavy HTML přidáme style
+	nevýhody:nepořádek, více stránek se musí kopírovat styly
+
+3)external = vytvoříme samostatný list pro CSS
+
+-Prioritní se načte dřív
+
+v CSS se nazývají selektory-skládá se z názvu, { + }, color:red = vlastnost a hodnota
+
+h1 {
+    color:red
+    text-alight:center
+		       }
+
+Selektory
+
+Název | co?
+_____________________________________________________
+ *    | Použije styly na všechny elementy
+ #id  | Použije styl na element s daným ID
+
+.class| Používá syl na elementy v třídě
+element|

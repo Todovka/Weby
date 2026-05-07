@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedeks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <head>
+        <h1>Pokedeks</h1>
+        <p>Počet chycených pokemonu: <span id="chyceny"></span></p>
+        <p>Počet bodů za pokemony: <span id="body"></span></p>
+        <button onclick="propustit(0)">Propustit pokemony</button>
+    </head>
+    <main>
+        <div>
+            <h2 id="nadpis_Mewtwo">Mewtwo</h2>
+            <img id="obrazek_Mewtwo" src="assets/mewtwo.png" alt="mewtwo">
+            <button onclick="chytit('hodnota_mewtwo', 'nadpis_Mewtwo')">Chytit</button>
+            <button
+                onclick="evoluce('assets/Mewtwo_X.png', 'Mewteo X', 'nadpis_Mewtwo', 'obrazek_Mewtwo', 'hodnota_mewtwo', 420)">Evolvovat</button>
+            <p>body - <span id="hodnota_mewtwo">250</span></p>
+        </div>
+
+        <div>
+            <h2 id="nadpis_Pikachu">Pikachu</h2>
+            <img id="obrazek_Pikachu" src="assets/pikachu.png" alt="pikachu">
+            <button onclick="chytit('hodnota_pikachu', 'nadpis_Pikachu')">Chytit</button>
+            <button
+                onclick="evoluce('assets/Raichu.png', 'Raichu', 'nadpis_Pikachu', 'obrazek_Pikachu', 'hodnota_pikachu', 260)">Evolvovat</button>
+            <p>body - <span id="hodnota_pikachu">150</span></p>
+        </div>
+
+        <div>
+            <h2 id="nadpis_Charizard">Charizard</h2>
+            <img id="obrazek_Charizard" src="assets/charizard.png" alt="charizard">
+            <button onclick="chytit('hodnota_Charizard', 'nadpis_Charizard')">Chytit</button>
+            <button
+                onclick="evoluce('assets/Charizard_Y.png', 'Charizard Y', 'nadpis_Charizard', 'obrazek_Charizard', 'hodnota_Charizard', 325)">Evolvovat</button>
+            <p>body - <span id="hodnota_Charizard">200</span></p>
+        </div>
+    </main>
+    <footer>
+        <br>
+        <h3>Seznam chycených pokémonů:</h3>
+        <ul id="seznam">
+
+        </ul>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

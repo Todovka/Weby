@@ -1,0 +1,47 @@
+.nadpis{
+    color: aqua;
+    background-color: black;
+    font-size: 50px;
+    text-align: center;
+}
+.divik{
+    width: 1000px;
+    padding-top: 20px;
+    border: 5px solid cyan;
+    border-radius: 30px;    
+    background-color: rgb(51, 51, 51);
+}
+.nadpisek{
+    color: aqua;
+    background-color: black;
+    font-size: 25px;
+    text-align: center;
+}
+.obraz{
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    width: 300px;
+    height: auto;
+}
+.paragraf{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    color: whitesmoke;
+
+}
+.podpis{
+    font-size: 15px;
+    color: black;
+}
+.nastred{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

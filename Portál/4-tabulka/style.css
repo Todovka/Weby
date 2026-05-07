@@ -1,0 +1,24 @@
+table
+{
+    border-collapse: collapse;
+}
+
+th, td
+{
+    border: 5px solid aqua;
+    padding: 4px;
+}
+th
+{
+    background-color:darkgoldenrod;
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+}
+td
+{
+    font-size: 18px;
+    color: black;
+    background-color: darkgoldenrod;    
+}
+

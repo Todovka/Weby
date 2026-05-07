@@ -1,0 +1,49 @@
+* {
+    background-color: rgb(55, 233, 224);
+}
+.obraz {
+    width: 350px;
+    border: 10px solid black;
+    border-radius: 50px;
+}
+.nadpis {
+    border-left: 7px solid rgb(255, 0, 170);
+    background-color: palevioletred;
+    margin-left: 15px;
+    font-size: 30px;
+}
+.hlnad {
+    text-align: center;
+    color: rgb(122, 0, 116);
+    border-bottom: 4px;
+    font-size: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: palevioletred;
+}
+.paragra {
+    margin-left: 25px;
+    font-size: 20px;
+}
+.podnad {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-bottom: 4px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: palevioletred;
+}
+#hyptex {
+    font-size: 25px;
+    margin-left: 30px;
+    border-left: 4px solid rgb(255, 0, 170);
+}
+.hlpar {
+    text-align: center;
+    color: rgb(255, 0, 170);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blok {
+    border: 2px solid palevioletred;
+    border-color: palevioletred;
+}
