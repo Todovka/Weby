@@ -1,0 +1,3 @@
+Maximální počet úkolů na den 5 --> JS funkce pridat() --> v každym if/else if
+
+Obrázky se mění po kliknutí --> Takto si nastavíš jak se budeš daný den feelovat (POZOR, nemusí se změnit vždy, protože náhoda)
