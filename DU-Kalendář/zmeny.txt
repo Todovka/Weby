@@ -1,3 +1,5 @@
 Maximální počet úkolů na den 5 --> JS funkce pridat() --> v každym if/else if
 
-Obrázky se mění po kliknutí --> Takto si nastavíš jak se budeš daný den feelovat (POZOR, nemusí se změnit vždy, protože náhoda)
+Obrázky se mění po kliknutí --> Nastavíš jak se budeš daný den feelovat (POZOR, nemusí se změnit vždy, protože náhoda)
+
+Každý den má svůj rozpočet, obrázky ubírají (jenom v něděli přidávají) peníze, peníze se dají vydělat uhádnutím čísla pomocí tlačítka zvýšit rozpočet

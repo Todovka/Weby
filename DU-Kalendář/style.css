@@ -65,8 +65,12 @@
     border: solid 2px rgb(116, 116, 116);
     border-radius: 15px 5%;
     width: 11.5%;
-    height: auto;
     min-height: 0px;
+    height: auto;
+}
+
+.den:hover {
+    background-color: rgb(236, 235, 179);
 }
 
 .den h1 {
@@ -92,7 +96,7 @@
 
 .den img {
     width: 90%;
-    height: auto;
+    height: 105px;
     display: block;
     margin: auto;
 }
@@ -159,6 +163,7 @@
     align-items: center;
     gap: 5px;
     margin-top: 15px;
+    height: auto;
 }
 
 button {

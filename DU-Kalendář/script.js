@@ -1,3 +1,4 @@
+
 const pondeli = document.getElementById("lu-po")
 const utery = document.getElementById("lu-ut")
 const streda = document.getElementById("lu-st")
@@ -22,7 +23,7 @@ function pridat(farba, text) {
     novy_ukol.innerHTML = "<span>" + text + "</span>"
     if (den == 1) {
         if (ukoly_pondeli >= 5) {
-            alert("Tento den jsi už moc \"BUZZYYY\"")
+            alert("Tento den jsi už moc \"Zaneprázdněn\"")
         } else {
             pondeli.appendChild(novy_ukol)
             ukoly_pondeli += 1
@@ -30,7 +31,7 @@ function pridat(farba, text) {
     }
     else if (den == 2) {
         if (ukoly_utery >= 5) {
-            alert("Tento den jsi už moc \"BuZY\"")
+            alert("Tento den jsi už moc \"Zaneprázdněn\"")
         } else {
             utery.appendChild(novy_ukol)
             ukoly_utery += 1
@@ -38,7 +39,7 @@ function pridat(farba, text) {
     }
     else if (den == 3) {
         if (ukoly_streda >= 5) {
-            alert("Tento den jsi už moc \"BUzi\"")
+            alert("Tento den jsi už moc \"Zaneprázdněn\"")
         } else {
             streda.appendChild(novy_ukol)
             ukoly_streda += 1
@@ -46,7 +47,7 @@ function pridat(farba, text) {
     }
     else if (den == 4) {
         if (ukoly_ctvrtek >= 5) {
-            alert("Tento den jsi už moc \"bUzy\"")
+            alert("Tento den jsi už moc \"Zaneprázdněn\"")
         } else {
             ctvrtek.appendChild(novy_ukol)
             ukoly_ctvrtek += 1
@@ -54,7 +55,7 @@ function pridat(farba, text) {
     }
     else if (den == 5) {
         if (ukoly_patek >= 5) {
-            alert("Tento den jsi už moc \"BUZZYYYYYYYYYYYYYYYYYYYYYYYYY\"")
+            alert("Tento den jsi už moc \"Zaneprázdněn\"")
         } else {
             patek.appendChild(novy_ukol)
             ukoly_patek += 1
@@ -62,7 +63,7 @@ function pridat(farba, text) {
     }
     else if (den == 6) {
         if (ukoly_sobota >= 5) {
-            alert("Tento den jsi už moc \"BUZzzZYyyY\"")
+            alert("Tento den jsi už moc \"Zaneprázdněn\"")
         } else {
             sobota.appendChild(novy_ukol)
             ukoly_sobota += 1
@@ -90,14 +91,41 @@ function pridat_novy_ukol() {
 }
 function vymazat_ukoly(den) {
     let overeni = prompt("Yu šúr? Jestli jo, tak napiš 'y'")
-    if (overeni != 'y' || document.getElementById(den).innerHTML == "") {
+    if (overeni != 'y') {
         alert("https://www.instagram.com/honza_bily/")
     } else {
         document.getElementById(den).innerHTML = ""
     }
 }
-function obrazek(idcko) {
-    let promena = Math.floor(Math.random() * 4 + 1)
-    alert("Feeling se změnil")
-    document.getElementById(idcko).src = "assets/" + promena + ".jpg"
+function obrazek(idcko, penize_dne, plus_minus_penize) {
+
+    let rozpocet = Number(document.getElementById(penize_dne).innerHTML)
+    if (rozpocet + plus_minus_penize < 0) {
+        alert("Nemáš tolik rozpočtu na změnění nálady")
+    }
+    else {
+        let promena = Math.floor(Math.random() * 8 + 1)
+        document.getElementById(idcko).src = "assets/" + promena + ".jpg"
+        rozpocet += plus_minus_penize
+        document.getElementById(penize_dne).innerHTML = rozpocet
+    }
+}
+function gamba(idcko) {
+    let rozpocet = Number(document.getElementById(idcko).innerHTML)
+    let penize = Number(prompt("Kolik sázíš?"))
+    if (penize > rozpocet) {
+        alert("Nemáš takový kapitál")
+    } else {
+        let cislo = Math.floor(Math.random() * 10 + 1)
+        let tip = Number(prompt(("Uhodni číslo (od 1 do 10)")))
+        if (tip == cislo) {
+            alert("Právě jsi okradnul kasíno")
+            rozpocet = rozpocet + penize * 2
+            document.getElementById(idcko).innerHTML = rozpocet
+        } else {
+            alert("Tvé preníze byli znárodněny")
+            rozpocet = rozpocet - penize
+            document.getElementById(idcko).innerHTML = rozpocet
+        }
+    }
 }
