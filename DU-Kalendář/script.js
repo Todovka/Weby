@@ -1,3 +1,30 @@
+function fce_vypsat_ukoly() {
+    document.getElementById("pocet_ukolu").innerText = vsechny_ukoly
+}
+
+function fce_buzerujici_text() {
+    const buzerujici_text = document.getElementById("buzerujici_text")
+    if (vsechny_ukoly == 0) {
+        buzerujici_text.innerText = "Tenhle tejden ještě nemáš nic na plánu"
+        document.getElementById("pocet_ukolu").style.color = "black"
+    }
+    else if (vsechny_ukoly < 8 && vsechny_ukoly > 0) {
+        buzerujici_text.innerText = "Furt je tady čas na to scrolovat TikTok"
+        document.getElementById("pocet_ukolu").style.color = "green"
+    }
+    else if (vsechny_ukoly >= 8 && vsechny_ukoly < 35) {
+        buzerujici_text.innerText = "Odteď slovo 'lenost' neexistuje"
+        document.getElementById("pocet_ukolu").style.color = "orange"
+    }
+    else if (vsechny_ukoly == 35) {
+        buzerujici_text.innerText = "Dosáhnul jsi maximálního počtu úkolů "
+        document.getElementById("pocet_ukolu").style.color = "red"
+    }
+    else {
+        buzerujici_text.innerText = "Tohle nefituje ani stránka sama"
+        document.getElementById("pocet_ukolu").style.color = "black"
+    }
+}
 
 const pondeli = document.getElementById("lu-po")
 const utery = document.getElementById("lu-ut")
@@ -15,6 +42,10 @@ let ukoly_patek = 0
 let ukoly_sobota = 0
 let ukoly_nedele = 0
 
+let vsechny_ukoly = 0
+fce_vypsat_ukoly()
+fce_buzerujici_text()
+
 function pridat(farba, text) {
     let den = Number(prompt("V jaký dne to chceš udělat? (Po = 1... Ne = 7)"))
     const novy_ukol = document.createElement("div")
@@ -27,6 +58,9 @@ function pridat(farba, text) {
         } else {
             pondeli.appendChild(novy_ukol)
             ukoly_pondeli += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else if (den == 2) {
@@ -35,6 +69,9 @@ function pridat(farba, text) {
         } else {
             utery.appendChild(novy_ukol)
             ukoly_utery += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else if (den == 3) {
@@ -43,6 +80,9 @@ function pridat(farba, text) {
         } else {
             streda.appendChild(novy_ukol)
             ukoly_streda += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else if (den == 4) {
@@ -51,6 +91,9 @@ function pridat(farba, text) {
         } else {
             ctvrtek.appendChild(novy_ukol)
             ukoly_ctvrtek += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else if (den == 5) {
@@ -59,6 +102,9 @@ function pridat(farba, text) {
         } else {
             patek.appendChild(novy_ukol)
             ukoly_patek += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else if (den == 6) {
@@ -67,6 +113,9 @@ function pridat(farba, text) {
         } else {
             sobota.appendChild(novy_ukol)
             ukoly_sobota += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else if (den == 7) {
@@ -75,6 +124,9 @@ function pridat(farba, text) {
         } else {
             nedele.appendChild(novy_ukol)
             ukoly_nedele += 1
+            vsechny_ukoly += 1
+            fce_vypsat_ukoly()
+            fce_buzerujici_text()
         }
     }
     else {
@@ -89,14 +141,7 @@ function pridat_novy_ukol() {
     ukol.innerHTML = zadani + ' <button onclick="pridat(\'' + barva + '\',\'' + zadani + '\')" class="pridat_tlacitko tlacitko">Přidat</button>'
     document.getElementById("ukoly").appendChild(ukol)
 }
-function vymazat_ukoly(den) {
-    let overeni = prompt("Yu šúr? Jestli jo, tak napiš 'y'")
-    if (overeni != 'y') {
-        alert("https://www.instagram.com/honza_bily/")
-    } else {
-        document.getElementById(den).innerHTML = ""
-    }
-}
+
 function obrazek(idcko, penize_dne, plus_minus_penize) {
 
     let rozpocet = Number(document.getElementById(penize_dne).innerHTML)
@@ -127,5 +172,30 @@ function gamba(idcko) {
             rozpocet = rozpocet - penize
             document.getElementById(idcko).innerHTML = rozpocet
         }
+    }
+}
+
+function vymazat_ukoly() {
+    let overeni = prompt("Yu šúr? Jestli jo, tak napiš 'y'")
+    if (overeni != 'y') {
+        alert("Nic se mazat nebude, koukej arbajťyt")
+    } else {
+        document.getElementById("lu-po").innerHTML = ""
+        document.getElementById("lu-ut").innerHTML = ""
+        document.getElementById("lu-st").innerHTML = ""
+        document.getElementById("lu-ct").innerHTML = ""
+        document.getElementById("lu-pa").innerHTML = ""
+        document.getElementById("lu-so").innerHTML = ""
+        document.getElementById("lu-ne").innerHTML = ""
+        ukoly_pondeli = 0
+        ukoly_utery = 0
+        ukoly_streda = 0
+        ukoly_ctvrtek = 0
+        ukoly_patek = 0
+        ukoly_sobota = 0
+        ukoly_nedele = 0
+        vsechny_ukoly = 0
+        fce_vypsat_ukoly()
+        fce_buzerujici_text()
     }
 }

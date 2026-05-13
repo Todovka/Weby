@@ -133,28 +133,31 @@
     align-items: center;
 }
 
-.novy_ukol {
+
+.tlacitko_dole,
+.tlacitko_nahore {
     background-color: rgb(240, 214, 158);
     border-radius: 5px;
-    padding: 4px;
     margin-bottom: 5px;
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
+    min-height: 35px;
 }
 
 .tlacitko_dole {
-    background-color: rgb(240, 214, 158);
-    border-radius: 5px;
-    padding: 4px;
-    margin-bottom: 5px;
     width: 95%;
-    min-height: 35px;
     height: auto;
+    gap: 10px;
     font-size: 15px;
     flex-direction: row;
-    gap: 10px;
     justify-content: flex-end;
+    padding: 4px;
+}
+
+.tlacitko_nahore {
+    width: 300px;
+    height: auto;
+    font-size: 25px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .tlacitka_dole_sekce {

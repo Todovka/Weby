@@ -11,10 +11,10 @@
 <body>
     <div class="navigace zvyrazneni"><!-- Navigace -->
         <h1>KALENDÁŘ</h1>
-        <div class="span_ukoly">
-            <h2>Úkoly:</h2>
-            <button class="novy_ukol" onclick="pridat_novy_ukol()">Přidat nový úkol</button>
-        </div>
+        <h2>Úkoly: <span id="pocet_ukolu"></span>, <span id="buzerujici_text"></span></h2>
+        <button class="tlacitko_nahore" onclick="alert('Jsme v česku')">Anglický kalendář</button> <br>
+        <button class="tlacitko_nahore" onclick="vymazat_ukoly()">Vymazat vše</button> <br>
+        <button class="tlacitko_nahore" onclick="pridat_novy_ukol()">Přidat nový úkol</button>
         <ul id="ukoly">
             <li>Promazat historii vyhledávání <button class="pridat_tlacitko"
                     onclick="pridat('lightcoral','Promazat historii vyhledávání')">Přidat</button></li>
@@ -34,7 +34,6 @@
             <p class="den_border">Úkoly:</p>
             <div id="lu-po" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-po', 'ukoly_pondeli')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_po', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=HRNnrm-fs_U" target="_blank"><button class="tlacitko_dole">Song
                         tohodle dne</button></a>
@@ -46,11 +45,10 @@
             <h1>Úterý</h1>
             <p>Jak budu Feelovat:</p>
             <img onclick="obrazek('uteri_obrazek', 'rozpocet_ut', -5)" id="uteri_obrazek" src="assets/1.jpg" alt="">
-            <p>Rozpočet na den: <span id="rozpocet_ut">90</span> Kč</p>
+            <p>Rozpočet na den: <br> <span id="rozpocet_ut">90</span> Kč</p>
             <p class="den_border">Úkoly:</p>
             <div id="lu-ut" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-ut', 'ukoly_utery')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_ut', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=fkGo5XYUVJQ&list=PL6xT2y9tAyqCKnlBPPyhkzto4SGW8jtUg&index=2"><button
                         class="tlacitko_dole">Song
@@ -61,11 +59,10 @@
             <h1>Středa</h1>
             <p>Jak budu Feelovat:</p>
             <img onclick="obrazek('strede_obrazek', 'rozpocet_st', -7)" id="strede_obrazek" src="assets/2.jpg" alt="">
-            <p>Rozpočet na den: <span id="rozpocet_st">100</span> Kč</p>
+            <p>Rozpočet na den: <br> <span id="rozpocet_st">100</span> Kč</p>
             <p class="den_border">Úkoly:</p>
             <div id="lu-st" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-st', 'ukoly_streda')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_st', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=GUF07jGO6OA"><button class="tlacitko_dole">Song tohodle
                         dne</button></a>
@@ -75,11 +72,10 @@
             <h1>Čtvrtek</h1>
             <p>Jak budu Feelovat:</p>
             <img onclick="obrazek('ctvrte_obrazek', 'rozpocet_ct', -9)" id="ctvrte_obrazek" src="assets/3.jpg" alt="">
-            <p>Rozpočet na den: <span id="rozpocet_ct">110</span> Kč</p>
+            <p>Rozpočet na den: <br> <span id="rozpocet_ct">110</span> Kč</p>
             <p class="den_border">Úkoly:</p>
             <div id="lu-ct" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-ct', 'ukoly_ctvrtek')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_ct', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=Y66j_BUCBMY"><button class="tlacitko_dole">Song
                         tohodle dne</button></a>
@@ -89,11 +85,10 @@
             <h1>Pátek</h1>
             <p>Jak budu Feelovat:</p>
             <img onclick="obrazek('patec_obrazek', 'rozpocet_pa', -5)" id="patec_obrazek" src="assets/4.jpg" alt="">
-            <p>Rozpočet na den: <span id="rozpocet_pa">117</span> Kč</p>
+            <p>Rozpočet na den: <br> <span id="rozpocet_pa">117</span> Kč</p>
             <p class="den_border">Úkoly:</p>
             <div id="lu-pa" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-pa', 'ukoly_patek')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_pa', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=xq0qE1fMlnA&list=PL6xT2y9tAyqCKnlBPPyhkzto4SGW8jtUg&index=24"><button
                         class="tlacitko_dole">Song tohodle
@@ -104,11 +99,10 @@
             <h1>Sobota</h1>
             <p>Jak budu Feelovat:</p>
             <img onclick="obrazek('sobote_obrazek', 'rozpocet_so', 20)" id="sobote_obrazek" src="assets/4.jpg" alt="">
-            <p>Rozpočet na den: <span id="rozpocet_so">50</span> Kč</p>
+            <p>Rozpočet na den: <br> <span id="rozpocet_so">50</span> Kč</p>
             <p class="den_border">Úkoly:</p>
             <div id="lu-so" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-so', 'ukoly_sobota')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_so', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=QZXc39hT8t4"><button class="tlacitko_dole">Song
                         tohodle dne</button></a>
@@ -118,11 +112,10 @@
             <h1>Neděle</h1>
             <p>Jak budu Feelovat:</p>
             <img onclick="obrazek('nedele_obrazek', 'rozpocet_ne', -3)" id="nedele_obrazek" src="assets/1.jpg" alt="">
-            <p>Rozpočet na den: <span id="rozpocet_ne">80</span> Kč</p>
+            <p>Rozpočet na den: <br> <span id="rozpocet_ne">80</span> Kč</p>
             <p class="den_border">Úkoly:</p>
             <div id="lu-ne" class="list_ukolu"></div>
             <div class="tlacitka_dole_sekce">
-                <button class="tlacitko_dole" onclick="vymazat_ukoly('lu-ne', 'ukoly_nedele')">Vymazat vše</button>
                 <button class="tlacitko_dole" onclick="gamba('rozpocet_ne', 50)">Zvýšit rozpočet</button>
                 <a href="https://www.youtube.com/watch?v=XPyusLl5L0c"><button class="tlacitko_dole">Song
                         tohodle dne</button></a>
